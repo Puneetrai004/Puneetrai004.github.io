@@ -25,3 +25,39 @@
 .nav-links li a:hover {
     text-decoration: underline;
 }
+
+/* Main Content */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: square;
+    margin: 20px auto;
+    width: 60%;
+    color: #555;
+}
+
+p, li {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Links */
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
