@@ -1,4 +1,4 @@
-![](https://github.com/Puneetrai004/Puneetrai004.github.io/blob/main/assets/headshot_circle.png)
+<img src="{{ https://puneetrai004.github.io/ }}/assets/img/headshot_circle.png" alt="Your Image">
 
 # Hi, I'm Puneet Kumar Rai!
 A passionate **Data Scientist** specializing in Machine Learning, Computer Vision, and NLP. I enjoy solving real-world problems and turning data into actionable insights.
