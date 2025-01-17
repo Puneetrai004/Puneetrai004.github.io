@@ -1,9 +1,4 @@
----
-layout: default
-title: Puneet Kumar Rai
----
-
-![Profile Photo]({{ site.logo }})
+![alt text](https://github.com/Puneetrai004/Puneetrai004.github.io/blob/main/assets/headshot_circle.png)
 
 # Hi, I'm Puneet Kumar Rai!
 A passionate **Data Scientist** specializing in Machine Learning, Computer Vision, and NLP. I enjoy solving real-world problems and turning data into actionable insights.
@@ -28,11 +23,11 @@ A passionate **Data Scientist** specializing in Machine Learning, Computer Visio
 ---
 
 ## 🛠️ Skills {#skills}
-- **Programming**: Python, R, SQL
+- **Programming**: Python, C++, SQL
 - **Machine Learning**: Scikit-learn, TensorFlow, PyTorch
-- **Visualization**: Matplotlib, Seaborn, Tableau
+- **Visualization**: Matplotlib, Seaborn, PowerBI
 - **Tools**: Git, Jupyter Notebooks, Google Colab
-- **Data Engineering**: Pandas, NumPy, Spark
+- **Data Engineering**: Pandas, NumPy
 
 ### Skill Proficiency
 ![Python Proficiency](https://progress-bar.dev/95/?title=Python)
@@ -54,9 +49,9 @@ Embed your data visualizations or Jupyter Notebook outputs here.
 ## 📬 Contact Me {#contact}
 Feel free to reach out for collaborations or discussions!
 
-- **Email**: [your.email@example.com](mailto:your.email@example.com)
-- **GitHub**: [Puneet Rai](https://github.com/Puneetrai004)
-- **LinkedIn**: [Puneet Rai](https://linkedin.com/in/puneetrai004)
+- **Email**: [@ContactMe](justpuneetrai@gmail.com)
+- **GitHub**: [Puneetrai004](https://github.com/Puneetrai004)
+- **LinkedIn**: [Puneet Rai](https://www.linkedin.com/in/puneet-kumar-rai/)
 
 ---
 
