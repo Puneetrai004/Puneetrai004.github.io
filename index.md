@@ -1,4 +1,4 @@
-![alt text](https://github.com/Puneetrai004/Puneetrai004.github.io/blob/main/assets/headshot_circle.png)
+![alt text](https://github.com/Puneetrai004/Puneetrai004.github.io/blob/main/assets/headshot_circle.png=100x20)
 
 # Hi, I'm Puneet Kumar Rai!
 A passionate **Data Scientist** specializing in Machine Learning, Computer Vision, and NLP. I enjoy solving real-world problems and turning data into actionable insights.
@@ -51,7 +51,7 @@ Feel free to reach out for collaborations or discussions!
 
 - **Email**: [@ContactMe](justpuneetrai@gmail.com)
 - **GitHub**: [Puneetrai004](https://github.com/Puneetrai004)
-- **LinkedIn**: [Puneet Rai](https://www.linkedin.com/in/puneet-kumar-rai/)
+- **LinkedIn**: [Puneet Kumar Rai](https://www.linkedin.com/in/puneet-kumar-rai/)
 
 ---
 
