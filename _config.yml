@@ -1,5 +1,15 @@
+# title: Puneet Kumar Rai
+# logo: /assets/headshot_circle.png
+# # description: Data Science Enthusiast
+# # show_downloads: true
+# theme: jekyll-theme-minimal
+
+
 title: Puneet Kumar Rai
-logo: /assets/headshot_circle.png
-# description: Data Science Enthusiast
-# show_downloads: true
-theme: jekyll-theme-minimal
+logo: assets/headshot_circle.png
+description: Data Science | Machine Learning Enthusiast | IIT BHU UnderGraduate
+theme: minima
+author: Puneet Kumar Rai
+baseurl: ""
+url: "https://github.com/Puneetrai004"
+paginate: 5
