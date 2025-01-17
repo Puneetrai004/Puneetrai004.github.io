@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-  <!-- Navigation Bar -->
+
+  
   <nav class="navbar">
     <ul class="nav-links">
       <li><a href="/">Home</a></li>
@@ -17,12 +18,12 @@
     </ul>
   </nav>
 
-  <!-- Main Content -->
+
   <main>
     <h1>Puneet Kumar Rai</h1>
     <h2>Data Science Enthusiast</h2>
 
-    <!-- Projects Section -->
+
     <section id="projects">
       <h2>Projects</h2>
       <ul>
@@ -37,7 +38,7 @@
       </ul>
     </section>
 
-    <!-- Skills Section -->
+
     <section id="skills">
       <h2>Skills</h2>
       <ul>
@@ -48,7 +49,7 @@
       </ul>
     </section>
 
-    <!-- Contact Section -->
+
     <section id="contact">
       <h2>Contact</h2>
       <p>Email: <a href="justpuneetrai@gmail.com">justpuneetrai@gmail.com</a></p>
@@ -57,3 +58,185 @@
   </main>
 </body>
 </html>
+ -->
+
+
+
+
+import React, { useState } from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Github, Linkedin, Mail, MenuIcon } from 'lucide-react';
+
+const Portfolio = () => {
+  const [activeSection, setActiveSection] = useState('home');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const projects = [
+    {
+      title: "Mineral Classification using Efficient-Net",
+      description: "Fine-tuned Efficient-Net B4 Architecture with Transfer Learning. Achieved an accuracy of 91%.",
+      skills: ["Deep Learning", "Computer Vision", "Transfer Learning"]
+    },
+    {
+      title: "Visual Taxonomy",
+      description: "Worked on a Fashion Dataset based on the Meesho Data Challenge Competition.",
+      skills: ["Machine Learning", "Computer Vision", "Data Analysis"]
+    }
+  ];
+
+  const skills = [
+    { category: "Programming", items: ["Python", "TensorFlow", "Keras"] },
+    { category: "Machine Learning", items: ["Deep Learning", "Computer Vision", "Transfer Learning"] },
+    { category: "Data Science", items: ["Data Analysis", "Data Visualization", "Statistical Analysis"] }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white">
+      {/* Navigation */}
+      <nav className="fixed w-full bg-gray-900 bg-opacity-90 backdrop-blur-sm z-50 px-4 py-4">
+        <div className="flex justify-between items-center max-w-6xl mx-auto">
+          <h1 className="text-xl font-bold">Puneet Kumar Rai</h1>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <MenuIcon />
+          </button>
+
+          {/* Desktop Navigation */}
+          <ul className="hidden md:flex space-x-8">
+            {["Home", "Projects", "Skills", "Contact"].map((item) => (
+              <li key={item}>
+                <Button 
+                  variant="ghost"
+                  className={`hover:text-blue-400 transition-colors ${
+                    activeSection.toLowerCase() === item.toLowerCase() ? 'text-blue-400' : ''
+                  }`}
+                  onClick={() => setActiveSection(item.toLowerCase())}
+                >
+                  {item}
+                </Button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <ul className="md:hidden pt-4 pb-2">
+            {["Home", "Projects", "Skills", "Contact"].map((item) => (
+              <li key={item} className="py-2">
+                <Button 
+                  variant="ghost"
+                  className="w-full text-left"
+                  onClick={() => {
+                    setActiveSection(item.toLowerCase());
+                    setIsMenuOpen(false);
+                  }}
+                >
+                  {item}
+                </Button>
+              </li>
+            ))}
+          </ul>
+        )}
+      </nav>
+
+      {/* Main Content */}
+      <main className="pt-24 px-4">
+        <div className="max-w-6xl mx-auto">
+          {/* Hero Section */}
+          <section className={`min-h-[80vh] flex items-center ${activeSection === 'home' ? 'block' : 'hidden'}`}>
+            <div className="space-y-6">
+              <h1 className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Data Science Enthusiast
+              </h1>
+              <p className="text-xl text-gray-300 max-w-2xl">
+                Passionate about leveraging AI and Machine Learning to solve real-world problems.
+                Specialized in Computer Vision and Deep Learning applications.
+              </p>
+              <div className="flex space-x-4">
+                <Button className="flex items-center gap-2">
+                  <Github size={20} />
+                  GitHub
+                </Button>
+                <Button variant="outline" className="flex items-center gap-2">
+                  <Linkedin size={20} />
+                  LinkedIn
+                </Button>
+              </div>
+            </div>
+          </section>
+
+          {/* Projects Section */}
+          <section className={`py-16 ${activeSection === 'projects' ? 'block' : 'hidden'}`}>
+            <h2 className="text-3xl font-bold mb-8">Projects</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {projects.map((project, index) => (
+                <Card key={index} className="bg-gray-800 border-gray-700">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-4">{project.title}</h3>
+                    <p className="text-gray-300 mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.skills.map((skill, i) => (
+                        <span key={i} className="px-3 py-1 bg-blue-500 bg-opacity-20 rounded-full text-sm">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Skills Section */}
+          <section className={`py-16 ${activeSection === 'skills' ? 'block' : 'hidden'}`}>
+            <h2 className="text-3xl font-bold mb-8">Skills</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {skills.map((skillGroup, index) => (
+                <Card key={index} className="bg-gray-800 border-gray-700">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold mb-4">{skillGroup.category}</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {skillGroup.items.map((skill, i) => (
+                        <span key={i} className="px-3 py-1 bg-blue-500 bg-opacity-20 rounded-full text-sm">
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className={`py-16 ${activeSection === 'contact' ? 'block' : 'hidden'}`}>
+            <h2 className="text-3xl font-bold mb-8">Contact</h2>
+            <Card className="bg-gray-800 border-gray-700">
+              <CardContent className="p-6">
+                <div className="space-y-4">
+                  <a href="mailto:justpuneetrai@gmail.com" className="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                    <Mail size={20} />
+                    justpuneetrai@gmail.com
+                  </a>
+                  <a href="https://www.linkedin.com/in/puneet-kumar-rai/" target="_blank" rel="noopener noreferrer" 
+                    className="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                    <Linkedin size={20} />
+                    Puneet Kumar Rai
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </section>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+export default Portfolio;
